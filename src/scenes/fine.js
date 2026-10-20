@@ -10,9 +10,11 @@ mostra_rigioca(s);
 }
 
 function mostra_messaggio(s) {
-PP.shapes.text_styled_add(s,
-LARGHEZZA / 2, ALTEZZA / 3, "GAME OVER",
-64, "Arial", "bold", NERO, null, 0.5, 0.5);
+    let messaggio = PP.game_state.get_variable("messaggio");
+
+    PP.shapes.text_styled_add(s,
+    LARGHEZZA / 2, ALTEZZA / 3, messaggio,
+    64, "Arial", "bold", NERO, null, 0.5, 0.5);
 }
 
 function mostra_rigioca(s) {
